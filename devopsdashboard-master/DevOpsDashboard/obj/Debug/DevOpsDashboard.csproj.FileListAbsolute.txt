@@ -1,0 +1,154 @@
+C:\DevOpsDashboard\DevOpsDashboard\bin\DevOpsDashboard.dll.config
+C:\DevOpsDashboard\DevOpsDashboard\bin\DevOpsDashboard.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\DevOpsDashboard.pdb
+C:\DevOpsDashboard\DevOpsDashboard\obj\Debug\DevOpsDashboard.csprojResolveAssemblyReference.cache
+C:\DevOpsDashboard\DevOpsDashboard\obj\Debug\DevOpsDashboard.dll
+C:\DevOpsDashboard\DevOpsDashboard\obj\Debug\DevOpsDashboard.pdb
+C:\DevOpsDashboard\DevOpsDashboard\bin\NativeBinaries\amd64\git2-e0902fb.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\NativeBinaries\amd64\git2-e0902fb.pdb
+C:\DevOpsDashboard\DevOpsDashboard\bin\NativeBinaries\x86\git2-e0902fb.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\NativeBinaries\x86\git2-e0902fb.pdb
+C:\DevOpsDashboard\DevOpsDashboard\bin\LibGit2Sharp.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\LibGit2Sharp.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\Newtonsoft.Json.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\System.Net.Http.Formatting.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\Newtonsoft.Json.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\System.Net.Http.Formatting.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\RestSharp.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\RestSharp.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\AjaxControlToolkit.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\AjaxMin.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\HtmlAgilityPack.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.Data.Edm.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.Data.OData.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\System.Spatial.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\HtmlAgilityPack.pdb
+C:\DevOpsDashboard\DevOpsDashboard\bin\HtmlAgilityPack.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.Data.Edm.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.Data.OData.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.pdb
+C:\DevOpsDashboard\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\System.Spatial.xml
+C:\DevOpsDashboard\DevOpsDashboard\bin\ar\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\cs\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\de\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\es\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\fr\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\he\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\hi\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\it\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ja\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ko\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\nl\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\pl\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\pt\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ru\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\de\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\es\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\it\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\de\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\es\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\fr\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\it\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ja\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ko\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ru\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\de\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\es\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\fr\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\it\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ja\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ko\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\ru\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hans\System.Spatial.resources.dll
+C:\DevOpsDashboard\DevOpsDashboard\bin\zh-Hant\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\NativeBinaries\amd64\git2-e0902fb.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\NativeBinaries\amd64\git2-e0902fb.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\NativeBinaries\x86\git2-e0902fb.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\NativeBinaries\x86\git2-e0902fb.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\DevOpsDashboard.dll.config
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\DevOpsDashboard.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\DevOpsDashboard.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\AjaxControlToolkit.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\AjaxMin.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\HtmlAgilityPack.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\LibGit2Sharp.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.Data.Edm.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.Data.OData.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Newtonsoft.Json.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\RestSharp.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\System.Net.Http.Formatting.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\System.Spatial.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\HtmlAgilityPack.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\HtmlAgilityPack.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\LibGit2Sharp.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.Data.Edm.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.Data.OData.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Microsoft.WindowsAzure.Storage.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\Newtonsoft.Json.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\RestSharp.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\System.Net.Http.Formatting.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\System.Spatial.xml
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ar\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\cs\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\de\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\es\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\fr\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\he\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\hi\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\it\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ja\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ko\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\nl\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\pl\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\pt\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ru\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\de\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\es\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\it\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\de\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\es\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\fr\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\it\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ja\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ko\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ru\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\de\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\es\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\fr\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\it\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ja\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ko\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\ru\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hans\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hant\System.Spatial.resources.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.dll
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.pdb
+C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.csprojResolveAssemblyReference.cache

@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props" Condition="Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C612E79E-2F5C-4776-B66B-33A5DEE81AC2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevOpsDashboard</RootNamespace>
+    <AssemblyName>DevOpsDashboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <NuGetPackageImportStamp>803df023</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2Sharp">
+      <HintPath>..\packages\LibGit2Sharp.0.21.0.176\lib\net40\LibGit2Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dashboard.aspx" />
+    <Content Include="GitCommits.aspx" />
+    <Content Include="images\dasboard\checkmark_64.png" />
+    <Content Include="images\dasboard\error_64.png" />
+    <Content Include="images\dasboard\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="images\dasboard\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="images\dasboard\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="images\dasboard\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="images\dasboard\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="images\dasboard\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="images\dasboard\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="images\dasboard\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="images\dasboard\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="images\dasboard\ui-icons_222222_256x240.png" />
+    <Content Include="images\dasboard\ui-icons_228ef1_256x240.png" />
+    <Content Include="images\dasboard\ui-icons_ef8c08_256x240.png" />
+    <Content Include="images\dasboard\ui-icons_ffd27a_256x240.png" />
+    <Content Include="images\dasboard\ui-icons_ffffff_256x240.png" />
+    <Content Include="images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="images\ui-icons_222222_256x240.png" />
+    <Content Include="images\ui-icons_228ef1_256x240.png" />
+    <Content Include="images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="images\ui-icons_ffffff_256x240.png" />
+    <Content Include="JenkinsCI.aspx" />
+    <Content Include="JobHistory.aspx" />
+    <Content Include="JobHistorytab.aspx" />
+    <Content Include="Jquery\gridviewScroll.min.js" />
+    <Content Include="Jquery\jquery-ui.js" />
+    <Content Include="Jquery\jquery-ui.min.js" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\DevOpsDashboard.csprojResolveAssemblyReference.cache" />
+    <Content Include="resources\chrome\axure-chrome-extension.crx" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chm_start.html" />
+    <Content Include="copy_of_home.html" />
+    <Content Include="dasboard.html" />
+    <Content Include="data\configuration.js" />
+    <Content Include="data\document.js" />
+    <Content Include="data\sitemap.js" />
+    <Content Include="data\styles.css" />
+    <Content Include="files\copy_of_home\data.js" />
+    <Content Include="files\copy_of_home\styles.css" />
+    <Content Include="files\dasboard\data.js" />
+    <Content Include="files\dasboard\styles.css" />
+    <Content Include="files\home\data.js" />
+    <Content Include="files\home\styles.css" />
+    <Content Include="files\home_-_no_cap_proj\data.js" />
+    <Content Include="files\home_-_no_cap_proj\styles.css" />
+    <Content Include="files\login\data.js" />
+    <Content Include="files\login\styles.css" />
+    <Content Include="files\my_cart\data.js" />
+    <Content Include="files\my_cart\styles.css" />
+    <Content Include="files\request\data.js" />
+    <Content Include="files\request\styles.css" />
+    <Content Include="files\request_confirm\data.js" />
+    <Content Include="files\request_confirm\styles.css" />
+    <Content Include="Home.html" />
+    <Content Include="home_-_no_cap_proj.html" />
+    <Content Include="Home_files\axurerp_pagespecificscript.js" />
+    <Content Include="Home_files\axurerp_pagespecificstyles.css" />
+    <Content Include="Home_files\axurerp_pagespecificstyles_ie6.css" />
+    <Content Include="Home_files\data.js" />
+    <Content Include="Home_files\u19_normal.png" />
+    <Content Include="Home_files\u21_normal.png" />
+    <Content Include="Home_files\u23_normal.png" />
+    <Content Include="images\copy_of_home\u101.png" />
+    <Content Include="images\copy_of_home\u103.png" />
+    <Content Include="images\copy_of_home\u104.png" />
+    <Content Include="images\copy_of_home\u105.png" />
+    <Content Include="images\copy_of_home\u106.png" />
+    <Content Include="images\copy_of_home\u108.jpg" />
+    <Content Include="images\copy_of_home\u108.png" />
+    <Content Include="images\copy_of_home\u110.jpg" />
+    <Content Include="images\copy_of_home\u110.png" />
+    <Content Include="images\copy_of_home\u112.png" />
+    <Content Include="images\copy_of_home\u113.jpg" />
+    <Content Include="images\copy_of_home\u114.png" />
+    <Content Include="images\copy_of_home\u115.jpg" />
+    <Content Include="images\copy_of_home\u115.png" />
+    <Content Include="images\copy_of_home\u116.png" />
+    <Content Include="images\copy_of_home\u119.png" />
+    <Content Include="images\copy_of_home\u120.png" />
+    <Content Include="images\copy_of_home\u127.png" />
+    <Content Include="images\copy_of_home\u129.png" />
+    <Content Include="images\copy_of_home\u134.png" />
+    <Content Include="images\copy_of_home\u135.png" />
+    <Content Include="images\copy_of_home\u138.png" />
+    <Content Include="images\copy_of_home\u139.png" />
+    <Content Include="images\copy_of_home\u150.png" />
+    <Content Include="images\copy_of_home\u152.png" />
+    <Content Include="images\copy_of_home\u159.png" />
+    <Content Include="images\copy_of_home\u160.png" />
+    <Content Include="images\copy_of_home\u163.png" />
+    <Content Include="images\copy_of_home\u164.png" />
+    <Content Include="images\copy_of_home\u169.png" />
+    <Content Include="images\copy_of_home\u171.png" />
+    <Content Include="images\copy_of_home\u194.png" />
+    <Content Include="images\copy_of_home\u196.png" />
+    <Content Include="images\copy_of_home\u199.png" />
+    <Content Include="images\copy_of_home\u201.png" />
+    <Content Include="images\copy_of_home\u26.png" />
+    <Content Include="images\copy_of_home\u33.jpg" />
+    <Content Include="images\copy_of_home\u40.png" />
+    <Content Include="images\copy_of_home\u64.png" />
+    <Content Include="images\copy_of_home\u65.png" />
+    <Content Include="images\copy_of_home\u66.png" />
+    <Content Include="images\copy_of_home\u67.png" />
+    <Content Include="images\copy_of_home\u68.png" />
+    <Content Include="images\copy_of_home\u69.png" />
+    <Content Include="images\copy_of_home\u70.png" />
+    <Content Include="images\copy_of_home\u71.png" />
+    <Content Include="images\copy_of_home\u72.png" />
+    <Content Include="images\copy_of_home\u73.jpg" />
+    <Content Include="images\copy_of_home\u73.png" />
+    <Content Include="images\copy_of_home\u74.jpg" />
+    <Content Include="images\copy_of_home\u77.jpg" />
+    <Content Include="images\copy_of_home\u77.png" />
+    <Content Include="images\copy_of_home\u78.jpg" />
+    <Content Include="images\copy_of_home\u78.png" />
+    <Content Include="images\copy_of_home\u81.png" />
+    <Content Include="images\copy_of_home\u82.png" />
+    <Content Include="images\copy_of_home\u92.png" />
+    <Content Include="images\copy_of_home\u93.png" />
+    <Content Include="images\copy_of_home\u96.png" />
+    <Content Include="images\copy_of_home\u97.png" />
+    <Content Include="images\copy_of_home\u99.png" />
+    <Content Include="images\dasboard\u101.png" />
+    <Content Include="images\dasboard\u103.png" />
+    <Content Include="images\dasboard\u105.png" />
+    <Content Include="images\dasboard\u107.png" />
+    <Content Include="images\dasboard\u109.png" />
+    <Content Include="images\dasboard\u111.png" />
+    <Content Include="images\dasboard\u113.png" />
+    <Content Include="images\dasboard\u125.png" />
+    <Content Include="images\dasboard\u131.png" />
+    <Content Include="images\dasboard\u133.png" />
+    <Content Include="images\dasboard\u135.png" />
+    <Content Include="images\dasboard\u137.png" />
+    <Content Include="images\dasboard\u153.png" />
+    <Content Include="images\dasboard\u155.png" />
+    <Content Include="images\dasboard\u157.png" />
+    <Content Include="images\dasboard\u159.png" />
+    <Content Include="images\dasboard\u161.png" />
+    <Content Include="images\dasboard\u163.png" />
+    <Content Include="images\dasboard\u165.png" />
+    <Content Include="images\dasboard\u166.png" />
+    <Content Include="images\dasboard\u169.png" />
+    <Content Include="images\dasboard\u170.png" />
+    <Content Include="images\dasboard\u198.png" />
+    <Content Include="images\dasboard\u200.png" />
+    <Content Include="images\dasboard\u202.png" />
+    <Content Include="images\dasboard\u207.png" />
+    <Content Include="images\dasboard\u214.png" />
+    <Content Include="images\dasboard\u242.png" />
+    <Content Include="images\dasboard\u244.png" />
+    <Content Include="images\dasboard\u246.png" />
+    <Content Include="images\dasboard\u69.png" />
+    <Content Include="images\dasboard\u75.png" />
+    <Content Include="images\dasboard\u81.png" />
+    <Content Include="images\dasboard\u97.png" />
+    <Content Include="images\dasboard\u99.png" />
+    <Content Include="images\home\u1.png" />
+    <Content Include="images\home\u10.png" />
+    <Content Include="images\home\u100.png" />
+    <Content Include="images\home\u101.png" />
+    <Content Include="images\home\u103.png" />
+    <Content Include="images\home\u104.png" />
+    <Content Include="images\home\u105.png" />
+    <Content Include="images\home\u106.png" />
+    <Content Include="images\home\u107.png" />
+    <Content Include="images\home\u108.png" />
+    <Content Include="images\home\u109.png" />
+    <Content Include="images\home\u111.png" />
+    <Content Include="images\home\u112.png" />
+    <Content Include="images\home\u113.png" />
+    <Content Include="images\home\u115.png" />
+    <Content Include="images\home\u117.png" />
+    <Content Include="images\home\u118.png" />
+    <Content Include="images\home\u119.png" />
+    <Content Include="images\home\u12.png" />
+    <Content Include="images\home\u121.png" />
+    <Content Include="images\home\u123.png" />
+    <Content Include="images\home\u124.png" />
+    <Content Include="images\home\u125.png" />
+    <Content Include="images\home\u127.png" />
+    <Content Include="images\home\u128.png" />
+    <Content Include="images\home\u129.png" />
+    <Content Include="images\home\u130.png" />
+    <Content Include="images\home\u131.png" />
+    <Content Include="images\home\u133.png" />
+    <Content Include="images\home\u134.png" />
+    <Content Include="images\home\u135.png" />
+    <Content Include="images\home\u136.png" />
+    <Content Include="images\home\u137.png" />
+    <Content Include="images\home\u139.png" />
+    <Content Include="images\home\u140.png" />
+    <Content Include="images\home\u141.png" />
+    <Content Include="images\home\u142.png" />
+    <Content Include="images\home\u143.png" />
+    <Content Include="images\home\u145.png" />
+    <Content Include="images\home\u146.png" />
+    <Content Include="images\home\u147.png" />
+    <Content Include="images\home\u148.png" />
+    <Content Include="images\home\u150.png" />
+    <Content Include="images\home\u151.png" />
+    <Content Include="images\home\u155.png" />
+    <Content Include="images\home\u158.png" />
+    <Content Include="images\home\u159.png" />
+    <Content Include="images\home\u160.png" />
+    <Content Include="images\home\u161.png" />
+    <Content Include="images\home\u162.png" />
+    <Content Include="images\home\u163.png" />
+    <Content Include="images\home\u164.png" />
+    <Content Include="images\home\u165.png" />
+    <Content Include="images\home\u166.png" />
+    <Content Include="images\home\u167.png" />
+    <Content Include="images\home\u172.png" />
+    <Content Include="images\home\u173.png" />
+    <Content Include="images\home\u175.png" />
+    <Content Include="images\home\u191.png" />
+    <Content Include="images\home\u199.png" />
+    <Content Include="images\home\u200.png" />
+    <Content Include="images\home\u202.png" />
+    <Content Include="images\home\u204.png" />
+    <Content Include="images\home\u217.png" />
+    <Content Include="images\home\u219.png" />
+    <Content Include="images\home\u22.png" />
+    <Content Include="images\home\u225.png" />
+    <Content Include="images\home\u229.png" />
+    <Content Include="images\home\u23.png" />
+    <Content Include="images\home\u24.png" />
+    <Content Include="images\home\u249.png" />
+    <Content Include="images\home\u25.png" />
+    <Content Include="images\home\u253.png" />
+    <Content Include="images\home\u255.png" />
+    <Content Include="images\home\u257.png" />
+    <Content Include="images\home\u26.png" />
+    <Content Include="images\home\u27.png" />
+    <Content Include="images\home\u28.png" />
+    <Content Include="images\home\u29.png" />
+    <Content Include="images\home\u3.png" />
+    <Content Include="images\home\u30.png" />
+    <Content Include="images\home\u33.png" />
+    <Content Include="images\home\u35.png" />
+    <Content Include="images\home\u40.png" />
+    <Content Include="images\home\u45.png" />
+    <Content Include="images\home\u54.png" />
+    <Content Include="images\home\u56.png" />
+    <Content Include="images\home\u64.png" />
+    <Content Include="images\home\u65.png" />
+    <Content Include="images\home\u68.png" />
+    <Content Include="images\home\u69.png" />
+    <Content Include="images\home\u70.png" />
+    <Content Include="images\home\u71.png" />
+    <Content Include="images\home\u74.png" />
+    <Content Include="images\home\u75.png" />
+    <Content Include="images\home\u76.png" />
+    <Content Include="images\home\u77.png" />
+    <Content Include="images\home\u80.png" />
+    <Content Include="images\home\u81.png" />
+    <Content Include="images\home\u83.png" />
+    <Content Include="images\home\u85.png" />
+    <Content Include="images\home\u87.png" />
+    <Content Include="images\home\u93.png" />
+    <Content Include="images\home\u95.png" />
+    <Content Include="images\home\u97.png" />
+    <Content Include="images\home\u99.png" />
+    <Content Include="images\home_-_no_cap_proj\u25.png" />
+    <Content Include="images\home_-_no_cap_proj\u32.png" />
+    <Content Include="images\home_-_no_cap_proj\u38.png" />
+    <Content Include="images\login\u0.png" />
+    <Content Include="images\login\u1.png" />
+    <Content Include="images\login\u10.jpg" />
+    <Content Include="images\login\u10.png" />
+    <Content Include="images\login\u101.png" />
+    <Content Include="images\login\u103.png" />
+    <Content Include="images\login\u104.jpg" />
+    <Content Include="images\login\u104.png" />
+    <Content Include="images\login\u105.png" />
+    <Content Include="images\login\u106.png" />
+    <Content Include="images\login\u108.png" />
+    <Content Include="images\login\u110.png" />
+    <Content Include="images\login\u114.png" />
+    <Content Include="images\login\u116.png" />
+    <Content Include="images\login\u119.png" />
+    <Content Include="images\login\u12.png" />
+    <Content Include="images\login\u121.png" />
+    <Content Include="images\login\u14.png" />
+    <Content Include="images\login\u21.png" />
+    <Content Include="images\login\u22.png" />
+    <Content Include="images\login\u23.png" />
+    <Content Include="images\login\u24.png" />
+    <Content Include="images\login\u25.png" />
+    <Content Include="images\login\u26.png" />
+    <Content Include="images\login\u27.png" />
+    <Content Include="images\login\u28.png" />
+    <Content Include="images\login\u3.jpg" />
+    <Content Include="images\login\u3.png" />
+    <Content Include="images\login\u32.png" />
+    <Content Include="images\login\u33.png" />
+    <Content Include="images\login\u34.png" />
+    <Content Include="images\login\u35.png" />
+    <Content Include="images\login\u38.png" />
+    <Content Include="images\login\u39.png" />
+    <Content Include="images\login\u40.png" />
+    <Content Include="images\login\u44.png" />
+    <Content Include="images\login\u45.png" />
+    <Content Include="images\login\u52.png" />
+    <Content Include="images\login\u53.png" />
+    <Content Include="images\login\u54.png" />
+    <Content Include="images\login\u55.png" />
+    <Content Include="images\login\u56.png" />
+    <Content Include="images\login\u6.png" />
+    <Content Include="images\login\u62.jpg" />
+    <Content Include="images\login\u63.jpg" />
+    <Content Include="images\login\u63.png" />
+    <Content Include="images\login\u64.png" />
+    <Content Include="images\login\u65.png" />
+    <Content Include="images\login\u66.jpg" />
+    <Content Include="images\login\u66.png" />
+    <Content Include="images\login\u67.jpg" />
+    <Content Include="images\login\u67.png" />
+    <Content Include="images\login\u68.png" />
+    <Content Include="images\login\u69.png" />
+    <Content Include="images\login\u7.png" />
+    <Content Include="images\login\u70.png" />
+    <Content Include="images\login\u71.png" />
+    <Content Include="images\login\u72.png" />
+    <Content Include="images\login\u73.png" />
+    <Content Include="images\login\u79.png" />
+    <Content Include="images\login\u8.png" />
+    <Content Include="images\login\u80.png" />
+    <Content Include="images\login\u82.png" />
+    <Content Include="images\login\u83.png" />
+    <Content Include="images\login\u84.png" />
+    <Content Include="images\login\u85.png" />
+    <Content Include="images\login\u87.png" />
+    <Content Include="images\login\u89.png" />
+    <Content Include="images\login\u9.png" />
+    <Content Include="images\login\u99.png" />
+    <Content Include="images\my_cart\u102.png" />
+    <Content Include="images\my_cart\u103_line.png" />
+    <Content Include="images\my_cart\u105_line.png" />
+    <Content Include="images\my_cart\u106_line.png" />
+    <Content Include="images\my_cart\u107.png" />
+    <Content Include="images\my_cart\u108.png" />
+    <Content Include="images\my_cart\u111.png" />
+    <Content Include="images\my_cart\u112.png" />
+    <Content Include="images\my_cart\u112_line.png" />
+    <Content Include="images\my_cart\u113.png" />
+    <Content Include="images\my_cart\u115.png" />
+    <Content Include="images\my_cart\u117.png" />
+    <Content Include="images\my_cart\u121.png" />
+    <Content Include="images\my_cart\u122.png" />
+    <Content Include="images\my_cart\u123.png" />
+    <Content Include="images\my_cart\u125.png" />
+    <Content Include="images\my_cart\u125_line.png" />
+    <Content Include="images\my_cart\u127.png" />
+    <Content Include="images\my_cart\u127_line.png" />
+    <Content Include="images\my_cart\u129.png" />
+    <Content Include="images\my_cart\u131.png" />
+    <Content Include="images\my_cart\u132.png" />
+    <Content Include="images\my_cart\u134.png" />
+    <Content Include="images\my_cart\u135.png" />
+    <Content Include="images\my_cart\u136.png" />
+    <Content Include="images\my_cart\u137.png" />
+    <Content Include="images\my_cart\u147.png" />
+    <Content Include="images\my_cart\u149.png" />
+    <Content Include="images\my_cart\u30.png" />
+    <Content Include="images\my_cart\u31.png" />
+    <Content Include="images\my_cart\u34.png" />
+    <Content Include="images\my_cart\u35.png" />
+    <Content Include="images\my_cart\u36.png" />
+    <Content Include="images\my_cart\u44_line.png" />
+    <Content Include="images\my_cart\u45_line.png" />
+    <Content Include="images\my_cart\u48_line.png" />
+    <Content Include="images\my_cart\u66.png" />
+    <Content Include="images\my_cart\u67.png" />
+    <Content Include="images\my_cart\u71.png" />
+    <Content Include="images\my_cart\u72.png" />
+    <Content Include="images\my_cart\u75.png" />
+    <Content Include="images\my_cart\u76.png" />
+    <Content Include="images\my_cart\u79.png" />
+    <Content Include="images\my_cart\u80.png" />
+    <Content Include="images\my_cart\u85_line.png" />
+    <Content Include="images\my_cart\u86_line.png" />
+    <Content Include="images\my_cart\u89_line.png" />
+    <Content Include="images\my_cart\u90_line.png" />
+    <Content Include="images\my_cart\u95.png" />
+    <Content Include="images\my_cart\u97.png" />
+    <Content Include="images\my_cart\u98.png" />
+    <Content Include="images\request\regen\u1.png" />
+    <Content Include="images\request\regen\u3.png" />
+    <Content Include="images\request\regen\u50.png" />
+    <Content Include="images\request\regen\u6.png" />
+    <Content Include="images\request\regen\u8.png" />
+    <Content Include="images\request\u131.png" />
+    <Content Include="images\request\u133.png" />
+    <Content Include="images\request\u50.png" />
+    <Content Include="images\request\u51.png" />
+    <Content Include="images\request\u56.png" />
+    <Content Include="images\request\u91.png" />
+    <Content Include="images\request\u92.png" />
+    <Content Include="images\request\u95.png" />
+    <Content Include="images\request\u96.png" />
+    <Content Include="images\request_confirm\u109_line.png" />
+    <Content Include="images\request_confirm\u111_line.png" />
+    <Content Include="images\request_confirm\u112_line.png" />
+    <Content Include="images\request_confirm\u113_line.png" />
+    <Content Include="images\request_confirm\u115_line.png" />
+    <Content Include="images\request_confirm\u116_line.png" />
+    <Content Include="images\request_confirm\u125_line.png" />
+    <Content Include="images\request_confirm\u127_line.png" />
+    <Content Include="images\request_confirm\u129_line.png" />
+    <Content Include="images\request_confirm\u131_line.png" />
+    <Content Include="images\request_confirm\u140.png" />
+    <Content Include="images\request_confirm\u142.png" />
+    <Content Include="images\request_confirm\u44_line.png" />
+    <Content Include="images\request_confirm\u45_line.png" />
+    <Content Include="images\request_confirm\u48_line.png" />
+    <Content Include="images\request_confirm\u49_line.png" />
+    <Content Include="images\request_confirm\u50_line.png" />
+    <Content Include="images\request_confirm\u52_line.png" />
+    <Content Include="images\request_confirm\u58_line.png" />
+    <Content Include="images\request_confirm\u85_line.png" />
+    <Content Include="images\request_confirm\u86_line.png" />
+    <Content Include="images\request_confirm\u89_line.png" />
+    <Content Include="images\request_confirm\u90_line.png" />
+    <Content Include="images\request_confirm\u93_line.png" />
+    <Content Include="images\request_confirm\u94_line.png" />
+    <Content Include="index.html" />
+    <Content Include="Login.html" />
+    <Content Include="Login_files\axurerp_pagespecificscript.js" />
+    <Content Include="Login_files\axurerp_pagespecificstyles.css" />
+    <Content Include="Login_files\axurerp_pagespecificstyles_ie6.css" />
+    <Content Include="Login_files\data.js" />
+    <Content Include="Login_files\u19_normal.png" />
+    <Content Include="Login_files\u21_normal.png" />
+    <Content Include="Login_files\u23_normal.png" />
+    <Content Include="My_Cart.html" />
+    <Content Include="My_Cart_files\axurerp_pagespecificscript.js" />
+    <Content Include="My_Cart_files\axurerp_pagespecificstyles.css" />
+    <Content Include="My_Cart_files\axurerp_pagespecificstyles_ie6.css" />
+    <Content Include="My_Cart_files\data.js" />
+    <Content Include="My_Cart_files\u23_normal.png" />
+    <Content Include="My_Cart_files\u27_normal.png" />
+    <Content Include="My_Cart_files\u28_normal.png" />
+    <Content Include="My_Cart_files\u34_line.png" />
+    <Content Include="My_Cart_files\u35_line.png" />
+    <Content Include="My_Cart_files\u36_line.png" />
+    <Content Include="My_Cart_files\u50_line.png" />
+    <Content Include="My_Cart_files\u51_line.png" />
+    <Content Include="My_Cart_files\u52_line.png" />
+    <Content Include="My_Cart_files\u52_normal.png" />
+    <Content Include="My_Cart_files\u53_normal.png" />
+    <Content Include="My_Cart_files\u57_normal.png" />
+    <Content Include="My_Cart_files\u58_normal.png" />
+    <Content Include="New_Master_1_files\u0_normal.png" />
+    <Content Include="New_Master_1_files\u2_normal.png" />
+    <Content Include="New_Master_1_files\u5_normal.png" />
+    <Content Include="New_Master_1_files\u7_normal.png" />
+    <Content Include="obj\Debug\DevOpsDashboard.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DevOpsDashboard.dll" />
+    <Content Include="obj\Debug\DevOpsDashboard.pdb" />
+    <Content Include="plugins\page_notes\page_notes.js" />
+    <Content Include="plugins\page_notes\styles\page_notes.css" />
+    <Content Include="plugins\sitemap\sitemap.js" />
+    <Content Include="plugins\sitemap\styles\images\079_page_16.png" />
+    <Content Include="plugins\sitemap\styles\images\086_case_16.png" />
+    <Content Include="plugins\sitemap\styles\images\225_responsive_16.png" />
+    <Content Include="plugins\sitemap\styles\images\228_togglenotes_16.png" />
+    <Content Include="plugins\sitemap\styles\images\229_variables_16.png" />
+    <Content Include="plugins\sitemap\styles\images\231_event_16.png" />
+    <Content Include="plugins\sitemap\styles\images\232_search_16.png" />
+    <Content Include="plugins\sitemap\styles\images\233_hyperlink_16.png" />
+    <Content Include="plugins\sitemap\styles\images\235_folderclosed_16.png" />
+    <Content Include="plugins\sitemap\styles\images\236_folderopen_16.png" />
+    <Content Include="plugins\sitemap\styles\images\adaptivecheck.png" />
+    <Content Include="plugins\sitemap\styles\images\case.gif" />
+    <Content Include="plugins\sitemap\styles\images\images.html" />
+    <Content Include="plugins\sitemap\styles\images\minus.gif" />
+    <Content Include="plugins\sitemap\styles\images\page.gif" />
+    <Content Include="plugins\sitemap\styles\images\plus.gif" />
+    <Content Include="plugins\sitemap\styles\sitemap.css" />
+    <Content Include="PROTOTYPE IMAGES\logo.jpg" />
+    <Content Include="PROTOTYPE IMAGES\logo.png" />
+    <Content Include="PROTOTYPE IMAGES\number.png" />
+    <Content Include="Request.html" />
+    <Content Include="Request_Confirm.html" />
+    <Content Include="Request_Confirm_files\axurerp_pagespecificscript.js" />
+    <Content Include="Request_Confirm_files\axurerp_pagespecificstyles.css" />
+    <Content Include="Request_Confirm_files\axurerp_pagespecificstyles_ie6.css" />
+    <Content Include="Request_Confirm_files\data.js" />
+    <Content Include="Request_Confirm_files\Review_ProjName_u44_normal.png" />
+    <Content Include="Request_Confirm_files\u0_normal.png" />
+    <Content Include="Request_Confirm_files\u2_normal.png" />
+    <Content Include="Request_Confirm_files\u33_line.png" />
+    <Content Include="Request_Confirm_files\u34_line.png" />
+    <Content Include="Request_Confirm_files\u35_line.png" />
+    <Content Include="Request_Confirm_files\u36_line.png" />
+    <Content Include="Request_Confirm_files\u37_line.png" />
+    <Content Include="Request_Confirm_files\u39_line.png" />
+    <Content Include="Request_Confirm_files\u40_line.png" />
+    <Content Include="Request_Confirm_files\u41_normal.png" />
+    <Content Include="Request_Confirm_files\u42_normal.png" />
+    <Content Include="Request_Confirm_files\u47_line.png" />
+    <Content Include="Request_Confirm_files\u50_line.png" />
+    <Content Include="Request_Confirm_files\u5_normal.png" />
+    <Content Include="Request_Confirm_files\u7_normal.png" />
+    <Content Include="Request_files\axurerp_pagespecificscript.js" />
+    <Content Include="Request_files\axurerp_pagespecificstyles.css" />
+    <Content Include="Request_files\axurerp_pagespecificstyles_ie6.css" />
+    <Content Include="Request_files\data.js" />
+    <Content Include="Request_files\u0_normal.png" />
+    <Content Include="Request_files\u2_normal.png" />
+    <Content Include="Request_files\u45_normal.png" />
+    <Content Include="Request_files\u46_normal.png" />
+    <Content Include="Request_files\u5_normal.png" />
+    <Content Include="Request_files\u7_normal.png" />
+    <Content Include="resources\chrome\allow_access.gif" />
+    <Content Include="resources\chrome\axure_logo.gif" />
+    <Content Include="resources\chrome\axure_logo.png" />
+    <Content Include="resources\chrome\chrome.html" />
+    <Content Include="resources\chrome\extensions_menu.gif" />
+    <Content Include="resources\chrome\splitter.gif" />
+    <Content Include="resources\chrome\splitter.png" />
+    <Content Include="resources\css\axure_rp_page.css" />
+    <Content Include="resources\css\default.css" />
+    <Content Include="resources\css\images\images.html" />
+    <Content Include="resources\css\images\newwindow.gif" />
+    <Content Include="resources\css\images\note.gif" />
+    <Content Include="resources\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="resources\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="resources\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="resources\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="resources\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="resources\css\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="resources\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="resources\css\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="resources\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="resources\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="resources\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="resources\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="resources\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="resources\css\jquery-ui-themes.css" />
+    <Content Include="resources\css\reset.css" />
+    <Content Include="resources\expand.html" />
+    <Content Include="resources\images\259_close_12rollover1.png" />
+    <Content Include="resources\images\259_close_12rollover2.png" />
+    <Content Include="resources\images\260_collapse_12rollover1.png" />
+    <Content Include="resources\images\260_collapse_12rollover2.png" />
+    <Content Include="resources\images\261_expand_12rollover1.png" />
+    <Content Include="resources\images\261_expand_12rollover2.png" />
+    <Content Include="resources\images\images.html" />
+    <Content Include="resources\images\newwindow.gif" />
+    <Content Include="resources\images\transparent.gif" />
+    <Content Include="resources\Other.html" />
+    <Content Include="resources\reload.html" />
+    <Content Include="resources\scripts\axprototype.js" />
+    <Content Include="resources\scripts\axurerp_beforepagescript.js" />
+    <Content Include="resources\scripts\axurerp_pagescript.js" />
+    <Content Include="resources\scripts\axure\action.js" />
+    <Content Include="resources\scripts\axure\adaptive.js" />
+    <Content Include="resources\scripts\axure\annotation.js" />
+    <Content Include="resources\scripts\axure\axQuery.js" />
+    <Content Include="resources\scripts\axure\axQuery.std.js" />
+    <Content Include="resources\scripts\axure\doc.js" />
+    <Content Include="resources\scripts\axure\drag.js" />
+    <Content Include="resources\scripts\axure\events.js" />
+    <Content Include="resources\scripts\axure\expr.js" />
+    <Content Include="resources\scripts\axure\flyout.js" />
+    <Content Include="resources\scripts\axure\geometry.js" />
+    <Content Include="resources\scripts\axure\globals.js" />
+    <Content Include="resources\scripts\axure\ie.js" />
+    <Content Include="resources\scripts\axure\init.temp.js" />
+    <Content Include="resources\scripts\axure\legacy.js" />
+    <Content Include="resources\scripts\axure\model.js" />
+    <Content Include="resources\scripts\axure\move.js" />
+    <Content Include="resources\scripts\axure\repeater.js" />
+    <Content Include="resources\scripts\axure\sto.js" />
+    <Content Include="resources\scripts\axure\style.js" />
+    <Content Include="resources\scripts\axure\tree.js" />
+    <Content Include="resources\scripts\axure\utils.temp.js" />
+    <Content Include="resources\scripts\axure\variables.js" />
+    <Content Include="resources\scripts\axure\viewer.js" />
+    <Content Include="resources\scripts\axure\visibility.js" />
+    <Content Include="resources\scripts\axutils.js" />
+    <Content Include="resources\scripts\jquery-1.7.1.min.js" />
+    <Content Include="resources\scripts\jquery-ui.js" />
+    <Content Include="resources\scripts\jquery-ui.min.js" />
+    <Content Include="resources\scripts\messagecenter.js" />
+    <Content Include="resources\scripts\player\axplayer.js" />
+    <Content Include="resources\scripts\player\splitter.js" />
+    <Content Include="resources\scripts\splitter.js" />
+    <Content Include="start.html" />
+    <Content Include="start_c_1.html" />
+    <Content Include="StyleSheets\jquery-ui.css" />
+    <Content Include="StyleSheets\jquery-ui.min.css" />
+    <Content Include="StyleSheets\jquery-ui.structure.css" />
+    <Content Include="StyleSheets\jquery-ui.structure.min.css" />
+    <Content Include="StyleSheets\jquery-ui.theme.css" />
+    <Content Include="StyleSheets\jquery-ui.theme.min.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GitCommits.aspx.cs">
+      <DependentUpon>GitCommits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GitCommits.aspx.designer.cs">
+      <DependentUpon>GitCommits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GitPorperties.cs" />
+    <Compile Include="JenkinsCI.aspx.cs">
+      <DependentUpon>JenkinsCI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JenkinsCI.aspx.designer.cs">
+      <DependentUpon>JenkinsCI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobHistory.aspx.cs">
+      <DependentUpon>JobHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobHistory.aspx.designer.cs">
+      <DependentUpon>JobHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobHistorytab.aspx.cs">
+      <DependentUpon>JobHistorytab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobHistorytab.aspx.designer.cs">
+      <DependentUpon>JobHistorytab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4442</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4442/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
