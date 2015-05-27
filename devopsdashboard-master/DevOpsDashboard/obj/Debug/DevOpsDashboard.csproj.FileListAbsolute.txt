@@ -151,4 +151,3 @@ C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hans\System.Spatia
 C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\bin\zh-Hant\System.Spatial.resources.dll
 C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.dll
 C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.pdb
-C:\DWH\new code\devopsdashboard-master\DevOpsDashboard\obj\Debug\DevOpsDashboard.csprojResolveAssemblyReference.cache

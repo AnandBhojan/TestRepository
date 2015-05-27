@@ -102,12 +102,11 @@ namespace DevOpsDashboard
 
 
         }
+
         private void bindCommitsHistoryToWebpage(List<CommitDetails> CommitDetailsList)
         {
 
-            gridViewGITHistory.DataSource = CommitDetailsList;
-            gridViewGITHistory.DataBind();
-
+           
 
             //gridViewGITHistory.BorderStyle = BorderStyle.None;
             // gridViewGITHistory.RowStyle.BorderStyle = BorderStyle.None;

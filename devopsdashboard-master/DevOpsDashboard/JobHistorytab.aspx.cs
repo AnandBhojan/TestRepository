@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -28,6 +30,8 @@ namespace DevOpsDashboard
                 PopulateProjectNamesJenkins();
                 BindJobDetails();
                 BindEmptyTable();
+                populateProjectNamesddl();
+                getCommitHistoryfromGIT();
             }
         }
 
@@ -129,7 +133,6 @@ namespace DevOpsDashboard
                     values[i] = 1;// Convert.ToDecimal((dt.Rows[i]["Status"].ToString() == "True" ? 1 : 2));
                 }
                 piechat1.PieChartValues.Add(new AjaxControlToolkit.PieChartValue
-
                 {
                     Category = dt.Rows[i]["BuildNumber"].ToString(),
                     Data = Convert.ToDecimal((dt.Rows[i]["Status"].ToString() == "True" ? 1 : 2))
@@ -142,7 +145,6 @@ namespace DevOpsDashboard
             BarChart1.ChartTitle = string.Format("{0}  Job History ", ddlProjectsJenkins.SelectedItem.Value);
             string category1 = string.Empty;
             Decimal[] values1 = new Decimal[dt.Rows.Count];
-
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 category1 = category1 + "," + dt.Rows[i]["BuildNumber"].ToString();
@@ -196,7 +198,6 @@ namespace DevOpsDashboard
                         dtTable = oCommon.GetJobdetails(dtTable, strResponse);
                         TotalBuild = TotalBuild + 1;
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -219,9 +220,62 @@ namespace DevOpsDashboard
             Response.Redirect("DashBoard.aspx", true);
         }
 
-        protected void grdJobHistory_RowDataBound(object sender, GridViewRowEventArgs e)
+        private void populateProjectNamesddl()
+        {
+            List<string> projectNames = new List<string>();
+            projectNames.Add("WordPress");
+            foreach (string projectName in projectNames)
+            {
+                ddlProjects.Items.Add(projectName);
+            }
+
+        }
+
+        private void getCommitHistoryfromGIT()
         {
 
+            var client = new RestClient("https://api.github.com/");
+            string repositoryName = "repos/DevOpsTestAdmin/" + ddlProjects.SelectedValue + "/commits";
+            client.Authenticator = new SimpleAuthenticator("username", "devopstestadmin", "password", "password2015");
+            var request = new RestRequest(repositoryName, Method.GET);
+            var response = client.Execute(request);
+            var responsecontent = response.Content;
+            deserializeGITCommitsResponse(responsecontent);
+        }
+
+        private void deserializeGITCommitsResponse(string responsecontent)
+        {
+
+            var commitsList = JsonConvert.DeserializeObject<dynamic>(responsecontent);
+            if (commitsList != null && commitsList.Count > 0)
+            {
+                CommitDetails CommitDetailsRec = new CommitDetails();
+                List<CommitDetails> CommitDetailsList = new List<CommitDetails>();
+                for (int i = 0; i < 10; i++)
+                {
+                    CommitDetailsRec = new CommitDetails();
+                    var commitmessage = commitsList[i].commit.message.Value;
+                    var commitername = commitsList[i].commit.committer.name.Value;
+                    var commitdate = commitsList[i].commit.committer.date.Value;
+                    CommitDetailsRec.Name = commitername;
+                    CommitDetailsRec.Date = commitdate.ToString();
+                    CommitDetailsRec.Message = commitmessage;
+                    CommitDetailsList.Add(CommitDetailsRec);
+                }
+                bindCommitsHistoryToWebpage(CommitDetailsList);
+            }
+        }
+
+        private void bindCommitsHistoryToWebpage(List<CommitDetails> CommitDetailsList)
+        {
+
+            gridViewGITHistory.DataSource = CommitDetailsList;
+            gridViewGITHistory.DataBind();
+        }
+
+        protected void ddlProjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getCommitHistoryfromGIT();
         }
     }
 }
