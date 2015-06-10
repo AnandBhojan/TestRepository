@@ -7,9 +7,7 @@
 <head id="head1" runat="server">
     <title>Job History</title>
     <%--  <meta http-equiv="refresh" content="30">--%>
-    <link href="StyleSheets/jquery-ui.min.css" type="text/css" rel="stylesheet" />
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet" />
-    <link href="StyleSheets/jquery-ui.css" type="text/css" rel="stylesheet" />
+
     <style>
         .bar {
             border-style: none !important;
@@ -20,7 +18,6 @@
             margin: 5px;
             padding: 5px;
             width: 99%;
-           
         }
 
         .gridviews {
@@ -32,8 +29,12 @@
     </style>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
-    <script src="https://github.com/twlikol/GridViewScroll/blob/master/gridviewScroll.min.js" type="text/javascript"></script>
     <script src="Jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet" />
+    <link href="StyleSheets/jquery-ui.theme.min.css" type="text/css" rel="stylesheet" />
+    <link href="StyleSheets/jquery-ui.css" type="text/css" rel="stylesheet" />
+
 
     <script type="text/javascript">
 
@@ -41,7 +42,9 @@
             $("#tabs").tabs();
             $("#tabsgit").tabs();
             $("#dvAccordian").accordion({
-                autoHeight: false
+                autoHeight: false,
+                active: false
+
             });
         });
     </script>
@@ -149,7 +152,7 @@
                                 <tr>
                                     <td colspan="2">
                                         <div style="height: 400px; overflow: auto">
-                                            <asp:GridView ID="grdJobHistory" runat="server" Width="99%" GridLines="None"  AutoGenerateColumns="false" CssClass="gridviews">
+                                            <asp:GridView ID="grdJobHistory" runat="server" Width="99%" GridLines="None" AutoGenerateColumns="false" CssClass="gridviews">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <HeaderStyle BackColor="#589DB8" Height="30px" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 <RowStyle BackColor="#FAFAFA" />
@@ -208,37 +211,14 @@
 
                         <div id="tabs-3">
                             <div width="100%" id="divChart" runat="server" style="height: 400px; overflow: auto; vertical-align: middle; text-align: center; font-family: Calibri; font-size: small; border: 1px solid Black">
-                                <table width="100%">
-                                    <tr>
-                                        <td style="width: 75%">
-                                            <cc1:BarChart ID="BarChart1" BorderStyle="None" CssClass="bar" runat="server" ChartHeight="500" ChartWidth="700"
-                                                ChartType="Column" ChartTitleColor="#CCCCCC" Visible="true" ValueAxisLines="10"
-                                                Height="482px" Width="850px">
-                                            </cc1:BarChart>
-                                            <br />
-                                        </td>
-                                        <td style="width: 25%; vertical-align: top">
-                                            <table style="width: 100%" border="1">
-                                                <tr>
-                                                    <td colspan="2" style="text-align: center">Legend</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1 - Success</td>
-                                                    <td>2 - Failure</td>
-                                                </tr>
-                                            </table>
-                                            <br />
-                                            <br />
-                                        </td>
-                                    </tr>
+                                <div>
 
-                                    <tr>
-                                        <td>
-                                            <cc1:PieChart ID="piechat1" BorderStyle="None" runat="server" ChartTitleColor="#0E426C" ChartHeight="300" ChartWidth="450"></cc1:PieChart>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </table>
+                                    <asp:Literal ID="lt" runat="server"></asp:Literal>
+
+                                </div>
+
+                                <div id="chart_div"></div>
+
                             </div>
 
 
@@ -273,7 +253,7 @@
                                     <tr>
                                         <td colspan="2">
 
-                                            <asp:GridView ID="gridViewGITHistory"  runat="server" GridLines="None" CssClass="gridviews" Width="100%" HeaderStyle-HorizontalAlign="Left">
+                                            <asp:GridView ID="gridViewGITHistory" runat="server" GridLines="None" CssClass="gridviews" Width="100%" HeaderStyle-HorizontalAlign="Left">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <HeaderStyle BackColor="#589DB8" Height="30px" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
                                                 <RowStyle BackColor="#FAFAFA" />
@@ -290,39 +270,8 @@
                             </div>
                         </div>
 
-                        <div id="tabs-3">
+                        <div id="tabs-2git">
                             <div width="100%" id="div1" runat="server" style="height: 400px; overflow: auto; vertical-align: middle; text-align: center; font-family: Calibri; font-size: small; border: 1px solid Black">
-                                <table width="100%">
-                                    <tr>
-                                        <td style="width: 75%">
-                                            <cc1:BarChart ID="BarChart2" BorderStyle="None" CssClass="bar" runat="server" ChartHeight="500" ChartWidth="700"
-                                                ChartType="Column" ChartTitleColor="#CCCCCC" Visible="true" ValueAxisLines="10"
-                                                Height="482px" Width="850px">
-                                            </cc1:BarChart>
-                                            <br />
-                                        </td>
-                                        <td style="width: 25%; vertical-align: top">
-                                            <table style="width: 100%" border="1">
-                                                <tr>
-                                                    <td colspan="2" style="text-align: center">Legend</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1 - Success</td>
-                                                    <td>2 - Failure</td>
-                                                </tr>
-                                            </table>
-                                            <br />
-                                            <br />
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <cc1:PieChart ID="PieChart1" BorderStyle="None" runat="server" ChartTitleColor="#0E426C" ChartHeight="300" ChartWidth="450"></cc1:PieChart>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </table>
                             </div>
 
 

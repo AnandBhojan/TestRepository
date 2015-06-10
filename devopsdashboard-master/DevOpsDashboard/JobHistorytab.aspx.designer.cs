@@ -76,22 +76,13 @@ namespace DevOpsDashboard {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divChart;
         
         /// <summary>
-        /// BarChart1 control.
+        /// lt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.BarChart BarChart1;
-        
-        /// <summary>
-        /// piechat1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.PieChart piechat1;
+        protected global::System.Web.UI.WebControls.Literal lt;
         
         /// <summary>
         /// ddlProjects control.
@@ -119,24 +110,6 @@ namespace DevOpsDashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div1;
-        
-        /// <summary>
-        /// BarChart2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.BarChart BarChart2;
-        
-        /// <summary>
-        /// PieChart1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.PieChart PieChart1;
         
         /// <summary>
         /// btnbvack control.

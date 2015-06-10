@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -123,39 +124,48 @@ namespace DevOpsDashboard
 
         public void GetChartData(DataTable dt)
         {
-            string category = "";
-            Decimal[] values = new Decimal[dt.Rows.Count];
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                category = category + "," + dt.Rows[i]["BuildNumber"].ToString();
-                if (dt.Rows[i]["Status"].ToString() == "True")
-                {
-                    values[i] = 1;// Convert.ToDecimal((dt.Rows[i]["Status"].ToString() == "True" ? 1 : 2));
-                }
-                piechat1.PieChartValues.Add(new AjaxControlToolkit.PieChartValue
-                {
-                    Category = dt.Rows[i]["BuildNumber"].ToString(),
-                    Data = Convert.ToDecimal((dt.Rows[i]["Status"].ToString() == "True" ? 1 : 2))
+            StringBuilder str = new StringBuilder();
+            str.Append(@"<script type='text/javascript'> google.load('visualization', '1', {'packages':['motionchart']});
 
-                });
+                google.setOnLoadCallback(drawChart); function drawChart() { var data = new google.visualization.DataTable();
+
+                data.addColumn('string', 'product');
+
+                data.addColumn('number', 'sales');
+
+                data.addColumn('number', 'expenses');
+
+                data.addColumn('string', 'location');
+
+                data.addRows([");
+
+
+           int count = dt.Rows.Count - 1;
+            for (int i = 0; i <= count; i++)
+            {
+                if (i == count)
+                {
+                    str.Append("['" + "1" + " aaa" + ", " +"111" + ", '" + dt.Rows[i]["location"].ToString() + "']");
+
+                }
+                else
+                {
+                    str.Append("['" + dt.Rows[i]["product"].ToString() + "', new Date (" + dt.Rows[i]["date"].ToString() + "), " + dt.Rows[i]["sales"].ToString() + ", " + dt.Rows[i]["expenses"].ToString() + ", '" + dt.Rows[i]["location"].ToString() + "'],");
+                }
+
             }
 
-            BarChart1.CategoriesAxis = category.Remove(0, 1);
-            BarChart1.Series.Add(new AjaxControlToolkit.BarChartSeries { Data = values, BarColor = "#32C4C9", Name = "Build No" });
-            BarChart1.ChartTitle = string.Format("{0}  Job History ", ddlProjectsJenkins.SelectedItem.Value);
-            string category1 = string.Empty;
-            Decimal[] values1 = new Decimal[dt.Rows.Count];
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                category1 = category1 + "," + dt.Rows[i]["BuildNumber"].ToString();
-                if (dt.Rows[i]["Status"].ToString() != "True")
-                {
 
-                    values1[i] = 2;// Convert.ToDecimal((dt.Rows[i]["Status"].ToString() == "True" ? 1 : 2));
-                }
-            }
-            BarChart1.CategoriesAxis = category1.Remove(0, 1);
-            BarChart1.Series.Add(new AjaxControlToolkit.BarChartSeries { Data = values1, BarColor = "#FFFFDE", Name = "Build No" });
+
+            str.Append(" ]);");
+
+            str.Append("  var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));");
+
+            str.Append(" chart.draw(data, {width: 600, height:300}); }");
+
+            str.Append("</script>");
+
+            lt.Text = str.ToString();
         }
 
         private DataTable BindonLoad()
